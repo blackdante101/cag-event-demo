@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Trends 2021 Online Conference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #475569;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #f97316;
+        }
+
+        .register-btn {
+            background: #f97316;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #ea580c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e3a8a 100%);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L100 0L100 100L0 100Z" fill="rgba(255,255,255,0.03)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-date {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .hero-cta {
+            background: #f97316;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: background 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: #ea580c;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #60a5fa;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #f1f5f9;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .about-text p {
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-btn {
+            background: #f97316;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .about-btn:hover {
+            background: #ea580c;
+        }
+
+        /* What You'll Learn Section */
+        .learn {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .learn-intro {
+            background: #1e3a8a;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .learn-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .learn-icon {
+            width: 60px;
+            height: 60px;
+            background: #f1f5f9;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .learn-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .learn-card p {
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        /* Statistics Section */
+        .statistics {
+            padding: 5rem 0;
+            background: #fef3c7;
+        }
+
+        .stats-header {
+            background: #1e3a8a;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #f97316;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Speakers Section */
+        .speakers {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .speakers-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .speaker-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .speaker-image {
+            width: 100%;
+            height: 300px;
+            background: #cbd5e1;
+        }
+
+        .speaker-info {
+            background: #1e3a8a;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .speaker-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .speaker-title {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Schedule Section */
+        .schedule {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .schedule-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #64748b;
+        }
+
+        .schedule-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .schedule-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .schedule-time {
+            font-weight: bold;
+            color: #1e293b;
+            min-width: 150px;
+        }
+
+        .schedule-bar {
+            flex: 1;
+            height: 40px;
+            background: #1e3a8a;
+            border-radius: 20px;
+            margin-left: 2rem;
+        }
+
+        /* Plans Section */
+        .plans {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .plan-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .plan-btn {
+            background: #1e3a8a;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .plan-btn:hover {
+            background: #1e40af;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .testimonial-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+            background: #cbd5e1;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .testimonial-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        .testimonial-content p {
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        /* Reserve Section */
+        .reserve {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .reserve-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: #64748b;
+        }
+
+        .reserve-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .reserve-item {
+            text-align: center;
+        }
+
+        .reserve-item h4 {
+            font-size: 1.3rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .reserve-item p {
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .reserve-cta {
+            text-align: center;
+        }
+
+        .reserve-btn {
+            background: #f97316;
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .reserve-btn:hover {
+            background: #ea580c;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: #1e293b;
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: #f97316;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #ea580c;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonial-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Flaaonix</div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="register-btn">Register</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-date">📅 OCT 12 - NOV 12, 2021</div>
+                    <h1 class="hero-title">Web Design Trends<br>2021 Online Conference</h1>
+                    <p class="hero-subtitle">Join us for an inspiring journey through the latest web design innovations</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span>📅</span>
+                            <span>31 days</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>⏰</span>
+                            <span>09 hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>⏱️</span>
+                            <span>30 minutes</span>
+                        </div>
+                    </div>
+                    <button class="hero-cta">Register Now</button>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">IT'S ALL GOING TO BE</div>
+            <h2 class="section-title">about this event</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-placeholder"></div>
+                </div>
+                <div class="about-text">
+                    <h3>Discover the Future of Web Design</h3>
+                    <p>Join industry leaders and innovative designers for a comprehensive exploration of the latest web design trends shaping the digital landscape in 2021 and beyond.</p>
+                    <p>This conference brings together creative professionals, developers, and design enthusiasts to share insights, techniques, and inspiration. Whether you're a seasoned designer or just starting your journey, you'll find valuable knowledge and connections here.</p>
+                    <p>Experience interactive workshops, inspiring keynotes, and networking opportunities that will transform the way you approach web design.</p>
+                    <button class="about-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section -->
+    <section class="learn">
+        <div class="container">
+            <div class="section-header">THIS DETAILS ABOUT</div>
+            <h2 class="section-title">what you'll learn</h2>
+            <div class="learn-intro">
+                <p>Gain practical skills and insights from industry experts covering the most important aspects of modern web design</p>
+            </div>
+            <div class="learn-grid">
+                <div class="learn-card">
+                    <div class="learn-icon">🎨</div>
+                    <h3>Graphic Design Basics</h3>
+                    <p>Master the fundamental principles of visual design, color theory, and typography that form the foundation of great web experiences.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">🌐</div>
+                    <h3>Web Design Trends</h3>
+                    <p>Explore cutting-edge design patterns, from minimalism to bold maximalism, and learn when and how to apply them effectively.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">💻</div>
+                    <h3>Programming Basics</h3>
+                    <p>Understand essential HTML, CSS, and JavaScript concepts to bring your design visions to life with clean, efficient code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="section-header">DONT MISS OUT OF EVENT BECAUSE WE'VE</div>
+            <h2 class="section-title">Event statistics</h2>
+            <div class="stats-header">
+                <p>Join thousands of design professionals who have already registered for this groundbreaking event</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">435</div>
+                    <div class="stat-label">Total participants from around the world</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Expert speakers and industry leaders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">115</div>
+                    <div class="stat-label">Countries represented globally</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Interactive workshop sessions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">215</div>
+                    <div class="stat-label">Professional companies participating</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Hours of premium content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="speakers" id="speakers">
+        <div class="container">
+            <div class="section-header">LET'S EXPLORE THE MOST</div>
+            <h2 class="section-title">Professional speakers</h2>
+            <p class="speakers-intro">
+                Learn from renowned experts who are shaping the future of web design. Our speakers bring decades of combined experience from leading tech companies, design agencies, and innovative startups around the globe.
+            </p>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image"></div>
+                    <div class="speaker-info">
+                        <div class="speaker-name">David Lawson</div>
+                        <div class="speaker-title">UI/UX Designer</div>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image"></div>
+                    <div class="speaker-info">
+                        <div class="speaker-name">Robert Williams</div>
+                        <div class="speaker-title">Frontend Developer</div>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image"></div>
+                    <div class="speaker-info">
+                        <div class="speaker-name">Jennifer Rodriguez</div>
+                        <div class="speaker-title">Creative Director</div>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image"></div>
+                    <div class="speaker-info">
+                        <div class="speaker-name">Michael Watson</div>
+                        <div class="speaker-title">Design Strategist</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="section-header">LET'S FOLLOW THE</div>
+            <h2 class="section-title">Event Agenda</h2>
+            <p class="schedule-intro">A carefully curated program designed to maximize your learning and networking opportunities</p>
+            <div class="schedule-list">
+                <div class="schedule-item">
+                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-bar"></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">10:45 - 11:45</div>
+                    <div class="schedule-bar"></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">11:00 - 12:00</div>
+                    <div class="schedule-bar"></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:00 - 01:30</div>
+                    <div class="schedule-bar"></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">16:00 - 18:30</div>
+                    <div class="schedule-bar"></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">19:30 - 20:00</div>
+                    <div class="schedule-bar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <div class="section-header">LET'S CHOOSE YOUR BEST</div>
+            <h2 class="section-title">Our Plans</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3 class="plan-name">Basic</h3>
+                    <div class="plan-price">$49</div>
+                    <ul class="plan-features">
+                        <li>Access to all keynote sessions</li>
+                        <li>Conference materials and resources</li>
+                        <li>Networking lounge access</li>
+                        <li>Certificate of attendance</li>
+                        <li>30-day recording access</li>
+                    </ul>
+                    <button class="plan-btn">Choose Plan</button>
+                </div>
+                <div class="plan-card">
+                    <h3 class="plan-name">Silver</h3>
+                    <div class="plan-price">$79</div>
+                    <ul class="plan-features">
+                        <li>All Basic features included</li>
+                        <li>5 workshop sessions of your choice</li>
+                        <li>Q&A with speakers</li>
+                        <li>Priority support</li>
+                        <li>60-day recording access</li>
+                        <li>Exclusive design templates</li>
+                    </ul>
+                    <button class="plan-btn">Choose Plan</button>
+                </div>
+                <div class="plan-card">
+                    <h3 class="plan-name">Gold</h3>
+                    <div class="plan-price">$129</div>
+                    <ul class="plan-features">
+                        <li>All Silver features included</li>
+                        <li>Unlimited workshop access</li>
+                        <li>1-on-1 mentorship session</li>
+                        <li>VIP networking events</li>
+                        <li>Lifetime recording access</li>
+                        <li>Premium resource library</li>
+                        <li>Early bird access to future events</li>
+                    </ul>
+                    <button class="plan-btn">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">WHAT PEOPLE SAY ABOUT</div>
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+                    <div class="testimonial-image"></div>
+                    <div class="testimonial-content">
+                        <h4>Matthew SMITH</h4>
+                        <p>"This conference completely transformed my approach to web design. The speakers were incredibly knowledgeable, and the workshops provided practical skills I could implement immediately. The networking opportunities alone were worth the price of admission!"</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-image"></div>
+                    <div class="testimonial-content">
+                        <h4>Isabella LINTON</h4>
+                        <p>"As a freelance designer, staying current with trends is crucial. This event delivered beyond my expectations with cutting-edge insights and actionable strategies. I've already recommended it to my entire team and can't wait for next year's conference!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reserve Section -->
+    <section class="reserve">
+        <div class="container">
+            <div class="section-header">DON'T WAIT, LET'S</div>
+            <h2 class="section-title">Rezerve your place!</h2>
+            <p class="reserve-intro">Secure your spot at the most anticipated web design event of the year. Limited seats available!</p>
+            <div class="reserve-grid">
+                <div class="reserve-item">
+                    <h4>Early Rewards</h4>
+                    <p>Register early and receive exclusive bonuses including premium templates, design resources, and special access to speaker materials worth over $200.</p>
+                </div>
+                <div class="reserve-item">
+                    <h4>Amazing Networking</h4>
+                    <p>Connect with like-minded professionals, potential clients, and industry leaders. Our dedicated networking sessions are designed to create lasting professional relationships.</p>
+                </div>
+                <div class="reserve-item">
+                    <h4>Group Discounts</h4>
+                    <p>Bring your team and save! Special discounts available for groups of 5 or more. Perfect for agencies and design teams looking to upskill together.</p>
+                </div>
+            </div>
+            <div class="reserve-cta">
+                <button class="reserve-btn">Reserve Your Seat</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <div class="contact-details">
+                        <p><strong>Address:</strong></p>
+                        <p>123 Design Street, Creative District</p>
+                        <p>San Francisco, CA 94102</p>
+                        <br>
+                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                        <p><strong>Email:</strong> info@webdesignconf.com</p>
+                        <br>
+                        <p><strong>Office Hours:</strong></p>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    </div>
+                    <div class="section-header" style="text-align: left; margin-top: 2rem;">FOLLOW US ON</div>
+                    <h3 style="margin-top: 0.5rem;">Company</h3>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" name="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Tell us about your interests and questions..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2021 Flaaonix. All Rights Reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
